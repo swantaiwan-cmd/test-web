@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新天鵝堡桌遊 | 週末家庭同樂會預約</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            orange: '#F97316', // tailwind orange-500
+                            yellow: '#FACC15', // tailwind yellow-400
+                            dark: '#1F2937',   // tailwind gray-800
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(to right, #F97316, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 text-brand-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <!-- Fun logo icon -->
+                    <div class="w-10 h-10 bg-brand-orange text-white rounded-xl flex items-center justify-center shadow-lg transform rotate-3">
+                        <i class="fa-solid fa-chess-knight text-xl"></i>
+                    </div>
+                    <span class="font-black text-2xl tracking-tight text-brand-dark">
+                        新天鵝堡桌遊
+                    </span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-brand-orange font-medium transition-colors">活動介紹</a>
+                    <a href="#booking" class="text-gray-600 hover:text-brand-orange font-medium transition-colors">立即預約</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-brand-orange focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-brand-dark overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/1118892594005985046_0" 
+                     alt="歐美全家正在玩桌遊" 
+                     class="w-full h-full object-cover opacity-50 select-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[70vh] min-h-[500px] flex items-center">
+                <div class="max-w-2xl text-white">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-yellow text-brand-dark font-bold text-sm mb-4 tracking-wider shadow-sm">
+                        2026 週末特別企劃
+                    </span>
+                    <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
+                        歡樂滿屋！<br>
+                        <span class="text-brand-yellow">家庭桌遊同樂會</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 font-medium leading-relaxed drop-shadow-md">
+                        放下手機，回到最純粹的快樂！由新天鵝堡精選百款適合全家大小的歐美經典桌遊，由專業人員親自教學，保證一玩就上手！
+                    </p>
+                    <a href="#booking" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-brand-dark bg-brand-yellow hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.4)]">
+                        <i class="fa-solid fa-ticket-simple mr-2"></i> 搶先預約報名
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Info Section -->
+        <section id="about" class="py-20 bg-white relative overflow-hidden">
+            <!-- Decorative Background Blob -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-yellow-100 blob-shape opacity-50 z-0 pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-black text-brand-dark mb-4">活動亮點</h2>
+                    <div class="w-24 h-1.5 bg-brand-orange mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Feature 1 -->
+                    <div class="bg-orange-50 rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow border border-orange-100">
+                        <div class="w-20 h-20 mx-auto bg-brand-orange text-white rounded-full flex items-center justify-center text-3xl mb-6 shadow-inner">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">百款歐美名作</h3>
+                        <p class="text-gray-600">從《卡卡頌》到《伐木達人》，精選最適合家庭同樂的獲獎桌遊，盡情暢玩。</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-yellow-50 rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow border border-yellow-100">
+                        <div class="w-20 h-20 mx-auto bg-brand-yellow text-brand-dark rounded-full flex items-center justify-center text-3xl mb-6 shadow-inner">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">專業達人教學</h3>
+                        <p class="text-gray-600">不用擔心規則看不懂！親切的桌遊姊姊與哥哥現場親自示範教學。</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-orange-50 rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow border border-orange-100">
+                        <div class="w-20 h-20 mx-auto bg-brand-orange text-white rounded-full flex items-center justify-center text-3xl mb-6 shadow-inner">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">獨家參加好禮</h3>
+                        <p class="text-gray-600">完成預約並現場報到，每組家庭皆可獲得新天鵝堡精美小禮物一份！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section id="booking" class="py-20 bg-brand-dark relative">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FACC15 2px, transparent 2px); background-size: 30px 30px;"></div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                    
+                    <!-- Left side - decorative -->
+                    <div class="md:w-2/5 bg-brand-orange p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
+                        <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-32 h-32 bg-brand-yellow opacity-20 rounded-full blur-xl"></div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-3xl font-black mb-2">預約報名</h3>
+                            <p class="text-orange-100 mb-8 font-medium">座位有限，請盡早保留您的專屬遊戲桌！</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <i class="fa-regular fa-calendar-check mt-1 mr-4 text-xl text-yellow-200"></i>
+                                    <div>
+                                        <p class="font-bold">活動日期</p>
+                                        <p class="text-sm text-orange-100">即日起至本週末</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fa-solid fa-location-dot mt-1 mr-4 text-xl text-yellow-200"></i>
+                                    <div>
+                                        <p class="font-bold">活動地點</p>
+                                        <p class="text-sm text-orange-100">新天鵝堡旗艦體驗館<br>台北市大安區...</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fa-solid fa-phone mt-1 mr-4 text-xl text-yellow-200"></i>
+                                    <div>
+                                        <p class="font-bold">聯絡專線</p>
+                                        <p class="text-sm text-orange-100">02-1234-5678</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12 relative z-10 hidden md:block">
+                            <i class="fa-solid fa-dice text-6xl text-orange-400 opacity-50 transform rotate-12"></i>
+                        </div>
+                    </div>
+
+                    <!-- Right side - The Form -->
+                    <div class="md:w-3/5 p-8 md:p-10 bg-gray-50">
+                        <form id="bookingForm" class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-bold text-gray-700 mb-1">聯絡人姓名 (Name)</label>
+                                <input type="text" id="name" required placeholder="例如：王小明" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors bg-white">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="phone" class="block text-sm font-bold text-gray-700 mb-1">聯絡電話 (Phone)</label>
+                                    <input type="tel" id="phone" required placeholder="09XX-XXXXXX" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors bg-white">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-bold text-gray-700 mb-1">電子郵件 (Email)</label>
+                                    <input type="email" id="email" required placeholder="example@email.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors bg-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="date" class="block text-sm font-bold text-gray-700 mb-1">預約日期 (Preferred Date)</label>
+                                    <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors bg-white">
+                                </div>
+                                <div>
+                                    <label for="attendees" class="block text-sm font-bold text-gray-700 mb-1">參加人數 (Attendees)</label>
+                                    <select id="attendees" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors bg-white">
+                                        <option value="" disabled selected>請選擇人數</option>
+                                        <option value="2">2 人</option>
+                                        <option value="3">3 人</option>
+                                        <option value="4">4 人 (最推薦)</option>
+                                        <option value="5">5 人</option>
+                                        <option value="6">6 人以上</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pt-4">
+                                <button type="submit" class="w-full py-4 px-6 rounded-xl text-white font-bold text-lg bg-gradient-to-r from-brand-orange to-[#f59e0b] hover:from-[#ea580c] hover:to-[#d97706] focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-lg transform hover:-translate-y-1">
+                                    <i class="fa-solid fa-paper-plane mr-2"></i> 確認送出預約
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 text-center md:text-left">
+                <p class="font-bold text-brand-dark text-lg">新天鵝堡桌遊 Swan Panasia</p>
+                <p class="text-gray-500 text-sm mt-1">© 2026 Swan Panasia Board Games. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand-orange hover:text-white transition-colors">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand-orange hover:text-white transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand-orange hover:text-white transition-colors">
+                    <i class="fa-brands fa-line"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Success Modal (Replaces standard alert) -->
+    <div id="successModal" class="fixed inset-0 z-[100] flex items-center justify-center px-4 hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-60 backdrop-blur-sm transition-opacity" id="modalBackdrop"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full relative z-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
+            <div class="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6">
+                <i class="fa-solid fa-check text-3xl text-green-500"></i>
+            </div>
+            <h3 class="text-2xl font-black text-center text-brand-dark mb-2">預約成功！</h3>
+            <p class="text-center text-gray-600 mb-8">
+                感謝您的預約，<span id="display-name" class="font-bold text-brand-orange"></span>！我們已將確認信寄至您的信箱。期待在桌遊樂園與您相見！
+            </p>
+            <button id="closeModalBtn" class="w-full py-3 px-4 bg-brand-dark hover:bg-gray-800 text-white rounded-xl font-bold transition-colors">
+                我知道了
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('bookingForm');
+            const modal = document.getElementById('successModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeBtn = document.getElementById('closeModalBtn');
+            const displayNameSpan = document.getElementById('display-name');
+
+            const openModal = (name) => {
+                displayNameSpan.textContent = name;
+                modal.classList.remove('hidden');
+                // Trigger reflow
+                void modal.offsetWidth;
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            };
+
+            const closeModal = () => {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    form.reset(); // Reset form after closing
+                }, 300);
+            };
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Basic validation is handled by HTML5 'required' attributes
+                const nameInput = document.getElementById('name').value;
+                openModal(nameInput);
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Close modal on backdrop click
+            document.getElementById('modalBackdrop').addEventListener('click', closeModal);
+        });
+    </script>
+</body>
+</html>
